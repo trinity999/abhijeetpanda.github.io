@@ -1,10 +1,14 @@
 /* General Body and Container Styles */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Fira Code', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;
     background-color: #0b0f14; /* Dark theme background */
+    background-image: url('cyber-grid.svg');
+    background-repeat: repeat;
+    background-size: 100px 100px; /* Adjust as needed for subtlety */
     color: #e0e6f1; /* Light text for dark background */
-    line-height: 1.6;
+    line-height: 1.7; /* Slightly increased for readability */
+    letter-spacing: 0.02em; /* Subtle letter spacing */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -15,16 +19,28 @@ body {
     padding: 20px;
 }
 
+.site-logo {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    margin-bottom: 20px;
+}
+
+
 /* Headings */
 h1, h2, h3 {
     color: #ffffff;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
 h1 {
     font-size: 2.8em;
     font-weight: 700;
+    text-shadow: 0 0 5px rgba(138, 180, 248, 0.3); /* Subtle blue glow */
+}
+
+h2, h3 {
+    text-shadow: 0 0 3px rgba(138, 180, 248, 0.2); /* Subtle blue glow */
 }
 
 h2 {
@@ -32,7 +48,7 @@ h2 {
     font-weight: 600;
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* Increased margin for better spacing */
 }
 
 h3 {
@@ -82,8 +98,15 @@ a:hover {
     background-color: #1a202c; /* Dark card background */
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(138, 180, 248, 0.1), 0 0 5px rgba(138, 180, 248, 0.05); /* Subtle blue glow */
     border: 1px solid #2d3748;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift card slightly */
+    box-shadow: 0 0 15px rgba(138, 180, 248, 0.3), 0 0 8px rgba(138, 180, 248, 0.1); /* Enhanced glow on hover */
+    border-color: #8ab4f8; /* Highlight border on hover */
 }
 
 .project-card h3 {
